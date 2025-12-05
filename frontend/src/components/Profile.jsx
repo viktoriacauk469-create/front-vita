@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { Flex, Layout, Button } from 'antd';
-import logo from '/logo.jpg';
+import logo from '/logo.png';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 
