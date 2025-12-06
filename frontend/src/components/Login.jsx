@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Flex, Layout, Form, Input, Button, message, Alert } from 'antd';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
-import logo from '/logo.jpg';
+import logo from '/logo.png';
 
 const { Header, Content } = Layout;
 

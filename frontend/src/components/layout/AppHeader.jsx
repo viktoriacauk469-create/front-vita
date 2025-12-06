@@ -2,7 +2,7 @@ import { Layout, Button } from 'antd';
 import ButtonGroup from 'antd/es/button/button-group';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
-import logo from '/logo.jpg';
+import logo from '/logo.png';
 
 
 const headerStyle = {
@@ -64,13 +64,13 @@ export default function AppHeader(){
             ) : (
                 <>
                     <Button 
-                        style={buttonStyle} 
+                        style={profileStyle} 
                         onClick={() => navigate('/register')}
                     >
                         Зареєструватися
                     </Button>
                     <Button 
-                        style={profileStyle} 
+                        style={buttonStyle} 
                         onClick={() => navigate('/login')}
                     >
                         Увійти

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Flex, Layout, Form, Input, Button, message, Alert } from 'antd';
 import { useNavigate, useSearchParams, Link } from 'react-router-dom';
-import logo from '/logo.jpg';
+import logo from '/logo.png';
 
 const { Header, Content } = Layout;
 
