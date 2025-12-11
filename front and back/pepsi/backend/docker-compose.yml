@@ -1,0 +1,25 @@
+services: # containers i`m try to run
+
+  app:
+    build:
+      context: . # my working directory(cinema-system == .)
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    depends_on: # app run starts only after everything under is builds up.
+      - postgres
+    ports:
+      - ${SPRING_PORT}:8080
+
+  postgres: # volume is the persistence part of container (by default container is stateless(data don`t persist), but volume can make it stateful (which is not bad -> cause data in DB will be saved))
+    image: postgres:16
+    env_file:
+      - .env
+    ports: # why are two ports instead of one ?
+      - ${POSTGRES_PORT}:5432   # first we use in local machine // second we use inside your container -> (for docker)
+    volumes:
+      - db_family_tree_data:/var/lib/postgresql/data
+
+# volumes == persistence;
+volumes:
+  db_family_tree_data:
